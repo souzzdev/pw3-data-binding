@@ -1,6 +1,8 @@
-<img src="biscoito.png" alt="biscoito">
-<p>frase motivacional</p>
-<button type="button">Quebrar</button>
-<button type="button">Limpar</button>
+<img [src]="biscoito" alt="biscoito">
+
+<p [hidden]="fechado">{{mensagem}}</p>
+<button (click)="abrir()">Quebrar</button>
+<button (click)="fechar()">Limpar</button>
+<button>Gerar outra frase</button>
 
 <router-outlet />
