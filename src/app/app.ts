@@ -9,10 +9,17 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('pw3-data-binding');
-  mensagem : any = [
-    "A",
-    "B",
-    "C",
+
+    mensagem = "";
+
+    frase: any = [
+    "Siga os bons e aprenda com eles.",
+    "O bom-senso vale mais do que muito conhecimento.",
+    "O riso é a menor distância entre duas pessoas.",
+    "Deixe de lado as preocupações e seja feliz.",
+    "Realize o óbvio, pense no improvável e conquiste o impossível.",
+    "Acredite em milagres, mas não dependa deles.",
+    "A maior barreira para o sucesso é o medo do fracasso.",
   ];
 
   biscoito = "biscoito.png"
@@ -22,6 +29,9 @@ export class App {
     if(this.fechado == true){
       this.fechado = false; 
       this.biscoito = "quebrado.png";
+      //Let - declarar variavel
+      let indice = Math.floor(Math.random() * this.frase.length);
+      this.mensagem = this.frase[indice];
     }
   }
 
