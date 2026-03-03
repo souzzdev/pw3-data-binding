@@ -1,8 +1,16 @@
-<img [src]="biscoito" alt="biscoito">
+<div class="text-center">
+<h1>Biscoito Mágico <span class="badge rounded-pill text-bg-warning" > Teste Sua Sorte!</span></h1>
+</div>
 
+<img [src]="biscoito" class="rounded mx-auto d-block" alt="biscoito">
+
+<div class="center d-flex justify-content-center" style="font-weight: bolder; font-size: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif">
 <p [hidden]="fechado">{{mensagem}}</p>
-<button (click)="abrir()">Quebrar</button>
-<button (click)="fechar()">Limpar</button>
-<button>Gerar outra frase</button>
+</div>
 
+<div class="center d-flex justify-content-center gap-3">
+<button (click)="abrir()" class="btn btn-outline-secondary">Quebrar</button>
+<button (click)="fechar()" class="btn btn-outline-secondary">Limpar</button>
+<button (click)="Gerar_frase_nova()" class="btn btn-outline-secondary">Gerar outra frase</button>
+</div>
 <router-outlet />

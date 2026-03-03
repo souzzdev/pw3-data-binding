@@ -10,8 +10,6 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('pw3-data-binding');
 
-    mensagem = "";
-
     frase: any = [
     "Siga os bons e aprenda com eles.",
     "O bom-senso vale mais do que muito conhecimento.",
@@ -24,6 +22,7 @@ export class App {
 
   biscoito = "biscoito.png"
   fechado: boolean = true;
+  mensagem = "";
 
   abrir(){
     if(this.fechado == true){
@@ -41,7 +40,10 @@ export class App {
       this.biscoito = "biscoito.png";
     }
   }
-
+  Gerar_frase_nova(){
+     let indice = Math.floor(Math.random() * this.frase.length);
+      this.mensagem = this.frase[indice];
+  }
   
 
 }
